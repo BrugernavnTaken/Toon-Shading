@@ -34,8 +34,8 @@
 			};
 			struct vertexOutput{
 				half4 pos : SV_POSITION;
-				fixed3 normalDir : TEXCOORD0;
-				fixed4 lightDir : TEXCOORD1;
+				fixed3 N : TEXCOORD0;
+				fixed4 L : TEXCOORD1;
 				fixed3 viewDir : TEXCOORD2;
 			};
 			
@@ -44,7 +44,7 @@
 				vertexOutput o;
 				
 				//normalDirection
-				o.normalDir = normalize( mul( half4( v.normal, 0.0 ), _World2Object ).rgb );
+				o.N = normalize( mul( half4( v.normal, 0.0 ), _World2Object ).rgb );
 				
 				//unity transform position
 				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
@@ -55,7 +55,7 @@
 				o.viewDir = normalize( _WorldSpaceCameraPos.rgb - posWorld.rgb );
 				//light direction
 				half3 fragmentToLightSource = _WorldSpaceLightPos0.rgb - posWorld.rgb;
-				o.lightDir = fixed4(
+				o.L = fixed4(
 					normalize( lerp(_WorldSpaceLightPos0.rgb , fragmentToLightSource, _WorldSpaceLightPos0.w) ),
 					lerp(1.0 , 1.0/length(fragmentToLightSource), _WorldSpaceLightPos0.w)
 				);
@@ -68,28 +68,25 @@
 			{
 				//Lighting
 				//dot product. Normal vector dot ray source.
-				fixed nDotL = dot(i.normalDir, i.lightDir);
+				fixed dotProduct = dot(i.N, i.L);
 				
 				//Decides what is shadow and what is not
-				fixed diffuseCutoff = saturate( ( max(_DiffuseThreshold, nDotL) - _DiffuseThreshold ) * pow( (2-_Diffusion), 10 ) );
+				fixed diffuseCutoff = saturate(( max(_DiffuseThreshold, dotProduct) - _DiffuseThreshold ) * pow( (2-_Diffusion), 10 ) );
 				
 				//Decides the specular lighting based on "shininess" if object
-				fixed specularCutoff = saturate((max(_Shininess,dot( reflect( -i.lightDir, i.normalDir ), i.viewDir ))-_Shininess)*pow((2-_SpecDiffusion),10));
+				fixed specularCutoff = saturate((max(_Shininess,dot( reflect( -i.L, i.N ), i.viewDir ))-_Shininess)*pow((2-_SpecDiffusion),10));
 				
 				//Brightness 
 				fixed3 ambientLight = (1-diffuseCutoff) * _UnlitColor;
 			
 				//
-				fixed3 diffuseReflection = (1-specularCutoff) * _Color * diffuseCutoff;
+				fixed3 diffuseReflection =  _Color * diffuseCutoff;
 				
 				//
 				fixed3 specularReflection = _SpecColor * specularCutoff;
 				
-				// adding the 
-				fixed3 lightFinal = ambientLight + diffuseReflection + specularReflection;
 				
-				
-				return fixed4(lightFinal, 1.0);
+				return fixed4(ambientLight + diffuseReflection + specularReflection, 1.0);
 			}
 			
 			ENDCG

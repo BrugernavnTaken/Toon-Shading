@@ -1,133 +1,12 @@
 Base path: /Applications/Unity/Unity.app/Contents
-Pipe name: \\.\pipe\UnityShaderCompiler-1-127615400
+Pipe name: \\.\pipe\UnityShaderCompiler-1--1594043948
 Cmd: getPlatforms
 Cmd: preprocess
-  insize=2988 outsize=599 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2689 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2689 outsize=748 kw= ok=1
+  insize=447 outsize=447 ok=1
 Cmd: preprocess
-  insize=2988 outsize=599 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2689 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2689 outsize=772 kw= ok=1
+  insize=1584 outsize=2245 ok=1
 Cmd: preprocess
-  insize=2990 outsize=599 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2691 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2691 outsize=779 kw= ok=1
-Cmd: preprocess
-  insize=2990 outsize=597 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2691 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2691 outsize=787 kw= ok=1
-Cmd: preprocess
-  insize=2993 outsize=599 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2694 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2694 outsize=763 kw= ok=1
-Cmd: preprocess
-  insize=2999 outsize=598 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2700 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2700 outsize=733 kw= ok=1
-Cmd: preprocess
-  insize=2999 outsize=599 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2700 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2700 outsize=707 kw= ok=1
-Cmd: preprocess
-  insize=3001 outsize=599 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2702 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2702 outsize=745 kw= ok=1
-Cmd: preprocess
-  insize=3001 outsize=599 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2702 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2702 outsize=745 kw= ok=1
-Cmd: preprocess
-  insize=3001 outsize=598 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2702 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2702 outsize=745 kw= ok=1
-Cmd: preprocess
-  insize=2997 outsize=599 ok=1
-Cmd: compileSnippet
-  error: 2 plat 0 at (67): function "frag" has no return statement
-  error: 2 plat 0 at (86): syntax error, unexpected identifier, expecting '(' at token "specularReflection" type name expected at token "specularReflection"
-  error: 2 plat 0 at (92): invalid type in type constructor
-  api=0 type=0 insize=2698 outsize=0 kw= ok=0
-Cmd: preprocess
-  insize=2995 outsize=599 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2696 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2696 outsize=786 kw= ok=1
-Cmd: preprocess
-  insize=2997 outsize=598 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2698 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2698 outsize=800 kw= ok=1
-Cmd: preprocess
-  insize=2999 outsize=598 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2700 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2700 outsize=764 kw= ok=1
-Cmd: preprocess
-  insize=2999 outsize=599 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2700 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2700 outsize=707 kw= ok=1
-Cmd: preprocess
-  insize=3001 outsize=599 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2702 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2702 outsize=800 kw= ok=1
-Cmd: preprocess
-  insize=3001 outsize=599 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2702 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2702 outsize=800 kw= ok=1
-Cmd: preprocess
-  insize=3001 outsize=598 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2702 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2702 outsize=800 kw= ok=1
-Cmd: preprocess
-  insize=3001 outsize=599 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2702 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2702 outsize=800 kw= ok=1
-Cmd: preprocess
-  insize=3001 outsize=599 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2702 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2702 outsize=801 kw= ok=1
-Cmd: preprocess
-  insize=2985 outsize=599 ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=2686 outsize=979 kw= ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=2686 outsize=746 kw= ok=1
+  insize=818 outsize=818 ok=1
 Cmd: preprocess
   insize=2965 outsize=598 ok=1
 Cmd: compileSnippet
@@ -135,8 +14,111 @@ Cmd: compileSnippet
 Cmd: compileSnippet
   api=0 type=1 insize=2666 outsize=746 kw= ok=1
 Cmd: preprocess
-  insize=2938 outsize=599 ok=1
+  insize=1423 outsize=2190 ok=1
+Cmd: preprocess
+  insize=1048 outsize=887 ok=1
+Cmd: preprocess
+  insize=472 outsize=472 ok=1
+Cmd: preprocess
+  insize=835 outsize=835 ok=1
+Cmd: preprocess
+  insize=730 outsize=730 ok=1
+Cmd: preprocess
+  insize=608 outsize=608 ok=1
+Cmd: preprocess
+  insize=1576 outsize=991 ok=1
+Cmd: preprocess
+  insize=2970 outsize=1659 ok=1
+Cmd: preprocess
+  insize=1189 outsize=403 ok=1
+Cmd: preprocess
+  insize=1153 outsize=392 ok=1
+Cmd: preprocess
+  insize=1355 outsize=1355 ok=1
+Cmd: preprocess
+  insize=316 outsize=316 ok=1
+Cmd: preprocess
+  insize=1500 outsize=667 ok=1
+Cmd: preprocess
+  insize=634 outsize=634 ok=1
+Cmd: preprocess
+  insize=963 outsize=963 ok=1
+Cmd: preprocess
+  insize=1725 outsize=1007 ok=1
+Cmd: preprocess
+  insize=2945 outsize=599 ok=1
 Cmd: compileSnippet
-  api=0 type=0 insize=2639 outsize=979 kw= ok=1
+  api=0 type=0 insize=2646 outsize=979 kw= ok=1
 Cmd: compileSnippet
-  api=0 type=1 insize=2639 outsize=677 kw= ok=1
+  api=0 type=1 insize=2646 outsize=705 kw= ok=1
+Cmd: preprocess
+  insize=2944 outsize=599 ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=2645 outsize=979 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=2645 outsize=705 kw= ok=1
+Cmd: preprocess
+  insize=2965 outsize=598 ok=1
+Cmd: preprocess
+  insize=2945 outsize=599 ok=1
+Cmd: preprocess
+  insize=2955 outsize=599 ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=2656 outsize=979 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=2656 outsize=705 kw= ok=1
+Cmd: preprocess
+  insize=2911 outsize=599 ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=2612 outsize=979 kw= ok=1
+Cmd: compileSnippet
+  error: 1 plat 0 at (71): implicit cast from "half4" to "half3"
+  error: 2 plat 0 at (74): ambiguous overloaded function reference "saturate(int)"
+  error: 1 plat 0 at (77): implicit cast from "half4" to "half3"
+  error: 1 plat 0 at (80): implicit cast from "half4" to "half3"
+  error: 1 plat 0 at (83): implicit cast from "half4" to "half3"
+  error: 1 plat 0 at (86): implicit cast from "half4" to "half3"
+  api=0 type=1 insize=2612 outsize=0 kw= ok=0
+Cmd: preprocess
+  insize=2955 outsize=599 ok=1
+Cmd: preprocess
+  insize=2936 outsize=599 ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=2637 outsize=979 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=2637 outsize=679 kw= ok=1
+Cmd: preprocess
+  insize=2955 outsize=599 ok=1
+Cmd: preprocess
+  insize=2895 outsize=597 ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=2596 outsize=979 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=2596 outsize=705 kw= ok=1
+Cmd: preprocess
+  insize=2850 outsize=598 ok=1
+Cmd: compileSnippet
+  error: 2 plat 0 at (47): expression left of ."normalDir" is not a struct or array
+  error: 2 plat 0 at (58): expression left of ."lightDir" is not a struct or array
+  error: 1 plat 0 at (80): implicit cast from "half4" to "half3"
+  error: 1 plat 0 at (83): implicit cast from "half4" to "half3"
+  error: 1 plat 0 at (86): implicit cast from "half4" to "half3"
+  api=0 type=0 insize=2551 outsize=0 kw= ok=0
+Cmd: preprocess
+  insize=2835 outsize=598 ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=2536 outsize=979 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=2536 outsize=705 kw= ok=1
+Cmd: preprocess
+  insize=2834 outsize=598 ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=2535 outsize=979 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=2535 outsize=705 kw= ok=1
+Cmd: preprocess
+  insize=2826 outsize=597 ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=2527 outsize=979 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=2527 outsize=701 kw= ok=1
