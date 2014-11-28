@@ -44,7 +44,7 @@
 				vertexOutput o;
 				
 				//normalDirection
-				o.normalDir = normalize( mul( half4( v.normal, 0.0 ), _World2Object ).xyz );
+				o.normalDir = normalize( mul( half4( v.normal, 0.0 ), _World2Object ).rgb );
 				
 				//unity transform position
 				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
@@ -52,11 +52,11 @@
 				//world position
 				half4 posWorld = mul(_Object2World, v.vertex);
 				//view direction
-				o.viewDir = normalize( _WorldSpaceCameraPos.xyz - posWorld.xyz );
+				o.viewDir = normalize( _WorldSpaceCameraPos.rgb - posWorld.rgb );
 				//light direction
-				half3 fragmentToLightSource = _WorldSpaceLightPos0.xyz - posWorld.xyz;
+				half3 fragmentToLightSource = _WorldSpaceLightPos0.rgb - posWorld.rgb;
 				o.lightDir = fixed4(
-					normalize( lerp(_WorldSpaceLightPos0.xyz , fragmentToLightSource, _WorldSpaceLightPos0.w) ),
+					normalize( lerp(_WorldSpaceLightPos0.rgb , fragmentToLightSource, _WorldSpaceLightPos0.w) ),
 					lerp(1.0 , 1.0/length(fragmentToLightSource), _WorldSpaceLightPos0.w)
 				);
 				
@@ -68,22 +68,22 @@
 			{
 				//Lighting
 				//dot product. Normal vector dot ray source.
-				fixed nDotL = saturate(dot(i.normalDir, i.lightDir.xyz));
+				fixed nDotL = dot(i.normalDir, i.lightDir);
 				
-				//hardness shadows 
+				//Decides what is shadow and what is not
 				fixed diffuseCutoff = saturate( ( max(_DiffuseThreshold, nDotL) - _DiffuseThreshold ) * pow( (2-_Diffusion), 10 ) );
 				
-				//genskin cutoff
-				fixed specularCutoff = saturate((max(_Shininess,dot( reflect( -i.lightDir.xyz, i.normalDir ), i.viewDir ))-_Shininess)*pow((2-_SpecDiffusion),10));
+				//Decides the specular lighting based on "shininess" if object
+				fixed specularCutoff = saturate((max(_Shininess,dot( reflect( -i.lightDir, i.normalDir ), i.viewDir ))-_Shininess)*pow((2-_SpecDiffusion),10));
 				
-				//
-				fixed3 ambientLight = (1-diffuseCutoff) * _UnlitColor.xyz;
+				//Brightness 
+				fixed3 ambientLight = (1-diffuseCutoff) * _UnlitColor;
 			
 				//
-				fixed3 diffuseReflection = (1-specularCutoff) * _Color.xyz * diffuseCutoff;
+				fixed3 diffuseReflection = (1-specularCutoff) * _Color * diffuseCutoff;
 				
 				//
-				fixed3 specularReflection = _SpecColor.xyz * specularCutoff;
+				fixed3 specularReflection = _SpecColor * specularCutoff;
 				
 				// adding the 
 				fixed3 lightFinal = ambientLight + diffuseReflection + specularReflection;
